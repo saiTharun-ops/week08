@@ -15,9 +15,9 @@ spec:
     metadata:
       labels:
         app: product-service
-    spec:
-      imagePullSecrets:
-      - name: acr-auth
+      spec:
+        imagePullSecrets:
+        - name: acr-auth
 
       containers:
       - name: product-service-container

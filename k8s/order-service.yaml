@@ -15,9 +15,9 @@ spec:
     metadata:
       labels:
         app: order-service
-    spec:
-      imagePullSecrets:
-        - name: acr-auth
+      spec:
+        imagePullSecrets:
+         - name: acr-auth
       containers:
       - name: order-service-container
         image: week08abcacr.azurecr.io/order_service:latest
