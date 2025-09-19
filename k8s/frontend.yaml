@@ -16,9 +16,11 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+        - name: acr-auth
       containers:
       - name: frontend-container
-        image: durgeshsamariya.azurecr.io/frontend:latest
+        image: week08abcacr.azurecr.io/frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80

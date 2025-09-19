@@ -7,6 +7,8 @@ metadata:
   labels:
     app: product-db
 spec:
+  imagePullSecrets:
+        - name: acr-auth
   replicas: 1
   selector:
     matchLabels:
@@ -16,6 +18,8 @@ spec:
       labels:
         app: product-db
     spec:
+      imagePullSecrets:
+        - name: acr-auth
       containers:
       - name: postgres
         image: postgres:15-alpine # Use the same PostgreSQL image as in Docker Compose

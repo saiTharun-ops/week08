@@ -16,9 +16,11 @@ spec:
       labels:
         app: order-service
     spec:
+      imagePullSecrets:
+        - name: acr-auth
       containers:
       - name: order-service-container
-        image: durgeshsamariya.azurecr.io/order_service:latest
+        image: week08abcacr.azurecr.io/order_service:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

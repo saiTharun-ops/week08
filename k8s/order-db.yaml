@@ -16,6 +16,8 @@ spec:
       labels:
         app: order-db
     spec:
+      imagePullSecrets:
+        - name: acr-auth
       containers:
       - name: postgres
         image: postgres:15-alpine # Use the same PostgreSQL image as in Docker Compose

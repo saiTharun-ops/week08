@@ -16,9 +16,12 @@ spec:
       labels:
         app: product-service
     spec:
+      imagePullSecrets:
+      - name: acr-auth
+
       containers:
       - name: product-service-container
-        image: durgeshsamariya.azurecr.io/product_service:latest
+        image: week08abcacr.azurecr.io/product_service:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
