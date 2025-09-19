@@ -19,8 +19,8 @@ on:
 # Define global environment variables that can be used across jobs
 env:
 
-  ACR_NAME: ${{ secrets.ACR_NAME }}
-  run: az acr login --name $(echo ${{ env.ACR_LOGIN_SERVER }} | cut -d. -f1)
+  #ACR_NAME: ${{ secrets.ACR_NAME }}
+  #run: az acr login --name $(echo ${{ env.ACR_LOGIN_SERVER }} | cut -d. -f1)
 
 
   # ACR Login Server (e.g., myregistry.azurecr.io)
