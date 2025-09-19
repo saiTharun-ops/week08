@@ -15,9 +15,9 @@ spec:
     metadata:
       labels:
         app: frontend
-      spec:
-        imagePullSecrets:
-          - name: acr-auth
+    spec:
+      imagePullSecrets:
+      - name: acr-auth
       containers:
       - name: frontend-container
         image: week08abcacr.azurecr.io/frontend:latest
